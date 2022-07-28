@@ -26,11 +26,23 @@ public class Dev {
         }
 
     }
-
+    //Método para calcular XP usando o stream.API
     public double calcularTotalXp(){
         return this.conteudosConcluidos.stream().mapToDouble(Conteudo::calcularXp).sum();
 
     }
+
+    //Método sem usar o modo stream.API
+//    public double calcularTotalXp() {
+//        Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();
+//        double soma = 0;
+//        while(iterator.hasNext()){
+//            double next = iterator.next().calcularXp();
+//            soma += next;
+//        }
+//        return soma;
+//
+//    }
 
     public String getNome() {
         return nome;
